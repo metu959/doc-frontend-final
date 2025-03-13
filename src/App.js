@@ -46,7 +46,7 @@ const POList = () => {
         
     
         try {
-            const response = await axios.post('/api/upload', formData, {
+            const response = await axios.post('/api/upload1', formData, {
                 headers: { 'Content-Type': 'multipart/form-data' },
             });
     
