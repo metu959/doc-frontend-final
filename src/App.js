@@ -54,8 +54,8 @@ const POList = () => {
     
             setMessage(
                 `✅ File uploaded successfully! 
-                 📌 PO Number: ${poNumber} 
-                 📅 PO Date: ${poDate} 
+                 📌 TE* Number: ${poNumber} 
+                 📅 TE* Date: ${poDate} 
                  🔗 View File: ` +
                 `Click here`
             );
@@ -71,7 +71,7 @@ const POList = () => {
     const handleConvert = async (poNumber) => {
         try {
             const response = await axios.post('/api/convert-to-wo', { poNumber });
-            alert(`WO Number Created: ${response.data.woNumber}`);
+            alert(`PO Number Created: ${response.data.woNumber}`);
             fetchWOData(); // Refresh WO table after conversion
         } catch (error) {
             alert(error.response?.data?.message || 'Conversion failed');
