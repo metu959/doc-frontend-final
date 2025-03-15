@@ -46,7 +46,7 @@ const POList = () => {
         
     
         try {
-            const response = await axios.post('/api/upload1', formData, {
+            const response = await axios.post('/api/upload', formData, {
                 headers: { 'Content-Type': 'multipart/form-data' },
             });
     
@@ -80,11 +80,11 @@ const POList = () => {
 
     return (
         <div className="container">
-            <h1>PO Management</h1>
+            <h1>Document Management</h1>
 
             {/* File Upload Section */}
             <div className="upload-section">
-                <h2>Upload PO PDF</h2>
+                <h2>Upload Tender Enquiry PDF</h2>
                 <input type="file" accept="application/pdf" onChange={handleFileChange} />
                 <br></br>
                 <button onClick={handleUpload}>Upload</button>
@@ -92,12 +92,12 @@ const POList = () => {
             </div>
 
             {/* PO List */}
-            <h2>PO List</h2>
+            <h2>Tender Enquiry (TE) List</h2>
             <table>
                 <thead>
                     <tr>
-                        <th>PO Number</th>
-                        <th>PO Date</th>
+                        <th>TE* Number</th>
+                        <th>TE* Date</th>
                         <th>File Name</th>
                         <th>Actions</th>
                     </tr>
@@ -119,13 +119,13 @@ const POList = () => {
             </table>
 
             {/* WO List */}
-            <h2>WO List</h2>
+            <h2>Purchase Orders (PO) List</h2>
             <table>
                 <thead>
                     <tr>
-                        <th>WO Number</th>
-                        <th>PO Number</th>
-                        <th>PO Date</th>
+                        <th>PO* Number</th>
+                        <th>TE* Number</th>
+                        <th>TE* Date</th>
                     </tr>
                 </thead>
                 <tbody>
