@@ -112,7 +112,7 @@ const POList = () => {
                                 <button className="convert-btn" onClick={() => handleConvert(po.poNumber)}>
                                     Convert to WO
                                 </button>
-                                <button className="convert-btn" onClick={}>
+                                <button className="convert-btn">
                                     Delete
                                 </button>
                             </td>
