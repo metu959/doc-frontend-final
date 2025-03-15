@@ -18,7 +18,7 @@ const POList = () => {
             const response = await axios.get('/api/po-data');
             setPOData(response.data);
         } catch (error) {
-            console.error('Error fetching PO data', error);
+            console.error('Error fetching TE data', error);
         }
     };
 
@@ -27,7 +27,7 @@ const POList = () => {
             const response = await axios.get('/api/wo-data');
             setWOData(response.data);
         } catch (error) {
-            console.error('Error fetching WO data', error);
+            console.error('Error fetching PO data', error);
         }
     };
 
@@ -71,7 +71,7 @@ const POList = () => {
     const handleConvert = async (poNumber) => {
         try {
             const response = await axios.post('/api/convert-to-wo', { poNumber });
-            alert(`PO Number Created: ${response.data.woNumber}`);
+            alert(`TE Number Created: ${response.data.woNumber}`);
             fetchWOData(); // Refresh WO table after conversion
         } catch (error) {
             alert(error.response?.data?.message || 'Conversion failed');
