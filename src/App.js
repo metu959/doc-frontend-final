@@ -57,7 +57,7 @@ const POList = () => {
                  📌 PO Number: ${poNumber} 
                  📅 PO Date: ${poDate} 
                  🔗 View File: ` +
-                `<a>Click here</a>`
+                `Click here`
             );
     
             fetchPOData(); // Refresh PO data in the table
@@ -111,6 +111,9 @@ const POList = () => {
                             <td>
                                 <button className="convert-btn" onClick={() => handleConvert(po.poNumber)}>
                                     Convert to WO
+                                </button>
+                                <button className="convert-btn" onClick={}>
+                                    Delete
                                 </button>
                             </td>
                         </tr>
